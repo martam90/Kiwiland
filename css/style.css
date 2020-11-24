@@ -1,0 +1,452 @@
+/* spacing */
+/* font*/
+/* colors */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Heebo", sans-serif;
+}
+
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+body.menu-active::after {
+  display: block;
+}
+
+header {
+  height: 100vh;
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.big-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Lobster", cursive;
+  font-size: clamp(2rem, 10vw, 3rem);
+  margin: 0;
+}
+
+.navbar {
+  display: block;
+  padding: 1.5rem;
+  -webkit-transition: margin-right ease 500ms;
+  transition: margin-right ease 500ms;
+}
+
+.navbar .navbar-brand-img {
+  width: 130px;
+  height: 80px;
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: 100vh;
+  min-width: 20vw;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 1.5rem;
+  list-style-type: none;
+  -webkit-transition: -webkit-transform ease 500ms;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: transform ease 500ms, -webkit-transform ease 500ms;
+  background-color: #A56076;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.navbar-nav.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform ease 500ms;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: transform ease 500ms, -webkit-transform ease 500ms;
+}
+
+.navbar-nav .nav-item {
+  padding: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.navbar-nav .nav-link {
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFE3F2;
+}
+
+.nav-open {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  font-size: 2rem;
+}
+
+.nav-open::after {
+  content: "\2630";
+}
+
+.nav-open.active::after {
+  content: "\2716";
+}
+
+.nav-open:hover {
+  color: #FFE3F2;
+}
+
+.intro {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro .intro-text {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Heebo", sans-serif;
+}
+
+.hide {
+  background-color: #000;
+  overflow: hidden;
+}
+
+.intro-text {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: block;
+}
+
+.slider {
+  background-color: #6E7888;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+@media (min-width: 576px) {
+  .photo:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  .photo:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+
+.info {
+  padding: 0 3rem;
+}
+
+.tab {
+  background-color: #99663A;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tab .tab-btn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc(100% / 3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: inherit;
+  -webkit-transition: linear 500ms;
+  transition: linear 500ms;
+  font-family: "Lobster", cursive;
+  font-size: 1.3rem;
+}
+
+.tab .tab-btn:hover {
+  background-color: #FFEACE;
+}
+
+.tab .tab-btn.active {
+  background-color: #995550;
+}
+
+.tab-content {
+  border: 1px solid #99663A;
+  border-top: none;
+  padding: 1.5rem;
+  display: none;
+  line-height: 1.8;
+}
+
+.gallery {
+  padding: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.photo {
+  overflow: hidden;
+}
+
+.photo .photo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: ease-in-out 500ms;
+  transition: ease-in-out 500ms;
+}
+
+.photo .photo-img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in-out 500ms;
+  transition: -webkit-transform ease-in-out 500ms;
+  transition: transform ease-in-out 500ms;
+  transition: transform ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
+}
+
+.faq {
+  padding: 0 3rem;
+}
+
+.faq .small-title {
+  text-align: center;
+}
+
+.acc-btn {
+  background-color: #99663A;
+  outline: none;
+  border: none;
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  text-align: left;
+  font-family: "Lobster", cursive;
+  font-size: 1.3rem;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+  cursor: pointer;
+  border-bottom: 1px solid #99663A;
+}
+
+.acc-btn::after {
+  content: "\002B";
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  float: right;
+  font-family: "Heebo", sans-serif;
+}
+
+.acc-btn.active::after {
+  content: "\02212";
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  font-family: "Heebo", sans-serif;
+}
+
+.acc-btn:hover {
+  background-color: #FFEACE;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.accordion-content .description {
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.8;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
+}
+
+.box .open-btn {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Heebo", sans-serif;
+  padding: 1rem;
+  background-color: #A56076;
+  cursor: pointer;
+  -webkit-transform: linear 500ms;
+          transform: linear 500ms;
+  font-weight: 700;
+}
+
+.box .open-btn:hover {
+  border: 1px solid #A56076;
+  background-color: #FFE3F2;
+  -webkit-transform: linear 500ms;
+          transform: linear 500ms;
+}
+
+.modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  height: 50%;
+  padding-top: 50vh;
+  -webkit-animation-name: boxdown;
+          animation-name: boxdown;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+
+@-webkit-keyframes boxdown {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes boxdown {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  position: relative;
+  background-color: #CF9EAC;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.close-btn {
+  display: block;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close-btn::after {
+  content: "\2716";
+  font-size: 1.7rem;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  color: #FFEACE;
+}
+/*# sourceMappingURL=style.css.map */

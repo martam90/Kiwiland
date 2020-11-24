@@ -1,0 +1,40 @@
+.info {
+    padding: 0 $spacing + 1.5rem;
+}
+
+.tab {
+    background-color: $colorbtn;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    .tab-btn {
+        flex-grow: 1;
+        width: calc(100% / 3);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        padding: $spacing;
+        background-color: inherit;
+        transition: linear 500ms;
+        font-family: $secfont;
+        font-size: $fontSize + 0.3rem;
+
+        &:hover {
+            background-color: $colorhover;
+        }
+
+        &.active {
+            background-color: $coloractive; 
+        }
+    }
+}
+
+.tab-content {
+    border: 1px solid $colorbtn;
+    border-top: none;
+    padding: $spacing;
+    display: none;
+    line-height: 1.8;
+}

@@ -1,0 +1,38 @@
+.intro {
+    background-color: $colorblack;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .intro-text {
+        color: $colorwhite;
+        font-size: 5rem;
+        font-family: $mainfont;
+    }
+}
+
+.hide {
+    background-color: $colorblack;
+    overflow: hidden;
+}
+
+    .intro-text {
+    transform: translateY(100%);
+    display: block;
+}
+
+
+.slider {
+    background-color: $colorgrey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}

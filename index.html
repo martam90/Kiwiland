@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your personal guide through New Zealand.">
+    <meta name="keywords" content="New Zealand, guide">
+    <meta name="author" content="Marta Banas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kiwiland</title>
+</head>
+<body>
+
+    <header id="home">
+        <nav class="navbar" role="navigation">
+            <a class="navbar-brand" href="#" role="banner">
+                <img class="navbar-brand-img" src="images/kiwi.png" alt="kiwi bird">
+            </a>
+            <ul class="navbar-nav">
+                <button class="nav-open" type="button"></button>
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        
+        <h1 class="big-title">Born to be Kiwi</h1>
+    </header>
+
+    <script src="menu.js"></script>
+
+    <div class="intro">
+        <div class="intro-content">
+            <h1 class="hide">
+                <span class="intro-text">Discover</span>
+            </h1>
+            <h1 class="hide">
+                <span class="intro-text">Kiwiland</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="slider"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous">
+    </script>
+    <script src="animation.js"></script>
+
+    <main role="main">
+        <section class="info" id="about">
+            <div class="tab">
+                <button class="tab-btn" type="button" data-tab-id="who">Who is Kiwi?</button>
+                <button class="tab-btn" type="button" data-tab-id="how">How to become Kiwi?</button>
+                <button class="tab-btn" type="button" data-tab-id="can">Can I get addicted?</button>
+            </div>
+
+            <div class="tab-content" data-tab-id="who">
+                <p class="description">This is a person who comes from New Zealand, simply New Zealander. </p>
+            </div>
+
+            <div class="tab-content" data-tab-id="how">
+                <p class="description">Here is the point. If you are not New Zealander, the only thing you need is to fall in love with Kiwiland! </p>
+            </div>
+
+            <div class="tab-content" data-tab-id="can">
+                <p class="description">Absolutely yes!</p>
+            </div>
+
+        </section>
+
+        <script src="tab.js"></script>
+
+        <section class="gallery" id="gallery">
+            <div class="photo"><img class="photo-img" src="images/gal1.jpg" alt="Tongariro Alpine Crossing"></div>
+            <div class="photo"><img class="photo-img" src="images/gal2.jpg" alt="Lame"></div>
+            <div class="photo"><img class="photo-img" src="images/gal3.jpg" alt="Wanaka"></div>
+            <div class="photo"><img class="photo-img" src="images/gal4.jpg" alt="Wai o Tapu"></div>
+            <div class="photo"><img class="photo-img" src="images/gal5.jpg" alt="Hobbiton"></div>
+            <div class="photo"><img class="photo-img" src="images/gal6.jpg" alt="Road"></div>
+            <div class="photo"><img class="photo-img" src="images/gal7.jpg" alt="Glacier"></div>
+        </section>
+
+        <section class="faq" id="faq">
+            <h2 class="small-title">Frequently asked questions</h2>
+
+            <div class="accordion">
+                <button class="acc-btn" type="button">Do I need visa?</button>
+                <div class="accordion-content">
+                    <p class="description">If you are not Australian guy, you have to apply for a visa. It is called NZeta and it is valid for 2 years from issue date.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="acc-btn" type="button">Can I bring my outdoor equipment with me?</button>
+                <div class="accordion-content">
+                    <p class="description">Sure you can. However, please rememer that your tent, sleeping bags or hiking sticks must be perfectly clean. At the airport we check the cleaninless of your staff.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="acc-btn" type="button">What can I do in Kiwiland?</button>
+                <div class="accordion-content">
+                    <p class="description">There is a lot of things to do here. You can see the sights, go hiking, learn about Maori culture, try a local cuisine...Do not worry, if you want to see and try them all, you probably need to consider moving in to New Zealand permanently.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="acc-btn" type="button">What is weather like in New Zealand?</button>
+                <div class="accordion-content">
+                    <p class="description">In summer on the North Island there is around 25 degree of Celsius. On the South Island, especially in Fjordland you will probably need jacket and trousers.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="acc-btn" type="button">Is it safe in Kiwiland?</button>
+                <div class="accordion-content">
+                    <p class="description">Yes, in general New Zealand is safe for travellers. </p>
+                </div>
+            </div> 
+        </section>
+
+        <script src="acc.js"></script>
+        
+        <section class="box">
+            <button class="open-btn" type="button">Go get your kiwi now!</button>
+
+            <div class="modal-box">
+                <div class="modal-content">
+                    <button class="close-btn" type="button"></button>
+                    <img src="images/kiwi.png" alt="kiwi bird" width="200px" height="150px">
+                </div>
+            </div>
+
+        </section>
+
+        <script src="modal.js"></script>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

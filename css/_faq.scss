@@ -1,0 +1,52 @@
+.faq {
+    padding: 0 $spacing + 1.5rem;
+
+    .small-title {
+        text-align: center;
+    }
+}
+
+.acc-btn {
+    background-color: $colorbtn;
+    outline: none;
+    border: none;
+    width: 100%;
+    display: block;
+    padding: $spacing - 0.5;
+    text-align: left;
+    font-family: $secfont;
+    font-size: $fontSize + 0.3;
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+    border-bottom: 1px solid $colorbtn;
+
+    &::after {
+        content: "\002B";
+        transform: scale(1.5);
+        float: right;
+        font-family: $mainfont;
+    }
+
+    &.active::after {
+        content: "\02212";
+        transform: scale(1.5);
+        font-family: $mainfont;   
+    }
+
+    &:hover {
+        background-color: $colorhover;
+        transition: ease-in-out 300ms;
+    }
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: ease-in-out 300ms;
+
+    .description {
+        margin: 0;
+        padding: $spacing - 0.5;
+        line-height: 1.8;
+    }
+}

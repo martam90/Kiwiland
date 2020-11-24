@@ -1,0 +1,98 @@
+header {
+    height: 100vh;
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.big-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $secfont;
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin: 0;
+}
+
+
+.navbar {
+    display: block;
+    padding: $spacing;
+    transition: margin-right ease 500ms;
+
+    .navbar-brand-img {
+        width: 130px;
+        height: 80px;
+    }
+}
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        height: 100vh;
+        min-width: 20vw;
+        margin: 0;
+        padding-left: 0;
+        padding-top: $spacing;
+        list-style-type: none;
+        transition: transform ease 500ms;
+        background-color: $colorsec;
+        transform: translateX(100%);
+
+        &.active {
+            transform: translateX(0%);
+            transition: transform ease 500ms;
+        }
+
+        .nav-item {
+            padding: $spacing;
+            flex-grow: 1;
+        }
+
+        .nav-link {
+            text-transform: uppercase;
+            color: $colorblack;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+                color: $colorsechover;
+            }
+        }
+    }
+
+    .nav-open {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transform: translateX(-100%);
+        font-size: $fontSize + 1rem;
+
+        &::after {
+            content: "\2630";
+        }
+
+        &.active::after {
+            content: "\2716";
+        }
+
+        &:hover {
+            color: $colorsechover;
+        }
+    }
+
+
