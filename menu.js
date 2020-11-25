@@ -7,8 +7,8 @@
         nav.classList.add('active');
         document.body.classList.add('menu-active');
     } else {
-        nav.classList.remove('active');
         document.body.classList.remove('menu-active');
+        nav.classList.remove('active');
     }
 });
 

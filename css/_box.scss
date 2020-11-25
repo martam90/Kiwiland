@@ -3,8 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: $spacing + 1.5rem;
-
+    padding: $spacing + 1.5rem 0;
 
     .open-btn {
         text-transform: uppercase;
@@ -39,36 +38,41 @@
     animation-duration: 500ms;
 
     @keyframes boxdown {
-        from {top: -300px; opacity: 0};
-        to {top: 0; opacity: 1};
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
     }
 }
 
-    .modal-content {
-        position: relative;
-        background-color: $colormodal;
-        padding: $spacing + 1rem;
-        text-align: center;
+.modal-content {
+    position: relative;
+    background-color: $colorsec;
+    padding: $spacing + 1rem;
+    text-align: center;
+}
+
+.close-btn {
+    display: block;
+    padding: $spacing - 0.5rem;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &::after {
+        content: "\2716";
+        font-size: $fontSize + 0.7rem;
     }
 
-    .close-btn {
-        display: block;
-        padding: $spacing - 0.5rem;
-        border: none;
-        outline: none;
-        background-color: inherit;
-        position: absolute;
-        top: 0;
-        right: 0;
-        
-        &::after {
-            content: "\2716";
-            font-size: $fontSize + 0.7rem;
-        }
-
-        &:hover {
-            cursor: pointer;
-            color: $colorhover;
-        }
+    &:hover {
+        cursor: pointer;
+        color: $colorhover;
     }
-
+}
