@@ -395,18 +395,17 @@ header {
   font-size: 1rem;
   font-family: "Heebo", sans-serif;
   padding: 1rem;
-  background-color: #a56076;
+  border: 2px solid #a56076;
   cursor: pointer;
-  -webkit-transform: linear 500ms;
-          transform: linear 500ms;
+  -webkit-transition: background ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
   font-weight: 700;
 }
 
 .box .open-btn:hover {
-  border: 1px solid #a56076;
-  background-color: #ffe3f2;
-  -webkit-transform: linear 500ms;
-          transform: linear 500ms;
+  background-color: #a56076;
+  -webkit-transition: background ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 .modal-box {

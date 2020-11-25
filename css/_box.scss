@@ -12,15 +12,14 @@
         font-size: $fontSize;
         font-family: $mainfont;
         padding: $spacing - 0.5rem;
-        background-color: $colorsec;
+        border: 2px solid $colorsec;
         cursor: pointer;
-        transform: linear 500ms;
+        transition: background ease-in-out 500ms;
         font-weight: 700;
 
         &:hover {
-            border: 1px solid $colorsec;
-            background-color: $colorsechover;
-            transform: linear 500ms;
+            background-color: $colorsec;
+            transition: background ease-in-out 500ms;
         }
     }
 }
